@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/time_test.dir/utests/test_Time.cpp.o  -o time_test -rdynamic libtools_lib.a 
