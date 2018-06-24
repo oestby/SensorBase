@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Tools/Time.hpp
+ctime
+-
+string
+-
+
+/home/oskar/Documents/projects/sens_base/utests/test_Time.cpp
+Tools/Time.hpp
+-
+iostream
+-
+thread
+-
+chrono
+-
+

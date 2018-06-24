@@ -1,0 +1,2 @@
+/usr/bin/ar qc libUNIX_SERIAL.a  CMakeFiles/UNIX_SERIAL.dir/include/serial/src/impl/unix.cc.o
+/usr/bin/ranlib libUNIX_SERIAL.a

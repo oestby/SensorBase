@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Tools/Logger.hpp
+string
+-
+fstream
+-
+iostream
+-
+Tools/Time.hpp
+-
+
+../include/Tools/Time.hpp
+ctime
+-
+string
+-
+
+/home/oskar/Documents/projects/sens_base/src/Tools/Logger.cpp
+Tools/Logger.hpp
+-
+
+/home/oskar/Documents/projects/sens_base/src/Tools/Time.cpp
+Tools/Time.hpp
+-
+

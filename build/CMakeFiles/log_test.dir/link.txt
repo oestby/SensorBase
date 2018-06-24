@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/log_test.dir/utests/test_Logger.cpp.o  -o log_test -rdynamic libtools_lib.a 

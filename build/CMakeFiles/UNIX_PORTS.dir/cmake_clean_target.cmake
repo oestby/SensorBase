@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libUNIX_PORTS.a"
+)

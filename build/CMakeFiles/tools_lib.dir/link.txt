@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtools_lib.a  CMakeFiles/tools_lib.dir/src/Tools/Logger.cpp.o CMakeFiles/tools_lib.dir/src/Tools/Time.cpp.o
+/usr/bin/ranlib libtools_lib.a

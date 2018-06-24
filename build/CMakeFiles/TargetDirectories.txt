@@ -1,0 +1,7 @@
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/edit_cache.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/time_test.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/tools_lib.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/rebuild_cache.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/serial_lib.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/main.dir
+/home/oskar/Documents/projects/sens_base/build/CMakeFiles/log_test.dir

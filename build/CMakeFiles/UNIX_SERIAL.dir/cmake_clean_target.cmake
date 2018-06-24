@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libUNIX_SERIAL.a"
+)
