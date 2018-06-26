@@ -6,7 +6,7 @@ import time as t
 
 DATA_PATH = ""
 FILE_NAME = "current"
-FILE_EXTENSION = "txt"
+FILE_EXTENSION = "csv"
 
 
 def pathFolderStructure(path, exclude_files = False):
