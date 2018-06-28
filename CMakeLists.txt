@@ -18,6 +18,9 @@ file(GLOB serial_SRC "include/serial/src/serial.cc"
 #Tools library sources
 file(GLOB tools_SRC "src/Tools/*.cpp")
 
+#GPIO library sources
+file(GLOB GPIO_SRC "src/GPIO/*.cpp")
+
 ########################
 #   Libraries          #
 ########################
@@ -27,6 +30,9 @@ add_library(tools_lib
 )
 add_library(serial_lib
         ${serial_SRC}
+)
+add_library(GPIO_lib
+        ${GPIO_SRC}
 )
 
 ########################
@@ -48,6 +54,8 @@ target_link_libraries(main serial_lib
 
 add_executable(log_test utests/test_Logger.cpp)
 add_executable(time_test utests/test_Time.cpp)
+add_executable(GPIO_test utests/test_GPIO.cpp)
 
 target_link_libraries(log_test tools_lib)
 target_link_libraries(time_test tools_lib)
+target_link_libraries(GPIO_test GPIO_lib)
