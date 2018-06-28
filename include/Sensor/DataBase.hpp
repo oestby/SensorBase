@@ -6,8 +6,8 @@
 
 class DataBase {
     public:
-        DataBase(std::string sensor_name):
-            sensor_name(sensor_name) {
+        DataBase(std::string sensor_name, unsigned int sensor_id):
+            sensor_name(sensor_name), sensor_id(sensor_id) {
                 //Empty
             }
 
@@ -18,13 +18,12 @@ class DataBase {
         unsigned int getSensorId(void) const {
             return sensor_id;
         }
-        std::string getSensorCreationTime(void) const {
+
+        std::string getTimeStamp(void) const {
             return time_stamp.getStartTimeString();
         }
-    protected:
+        private:
         tools::Time time_stamp;
-
-    private:
         std::string sensor_name;
         unsigned int sensor_id;
 
