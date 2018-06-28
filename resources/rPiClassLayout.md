@@ -1,5 +1,5 @@
 # The layout of the GIPO pins in the Raspberry Pi 
-
+<pre>
 /sys/class/gpio/.
                 |->export                   //This is used to start a pin.
                 |->unexport                 //This is used to stop a pin.
@@ -9,6 +9,7 @@
                 |->gpio*/.
                          |->direction       //The direction of the pin.
                          |->value           //The value of the pin.
+</pre>
                         
 ## How to work with the RPi GPIO:
 
