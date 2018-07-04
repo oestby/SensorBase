@@ -3,12 +3,16 @@
 
 #include <GPIO/GPIO.hpp>
 
+/*! MOSI Class for serial communication
+ * 
+ * This class is created to handle serial communication using MOSI.
+ *
+ */
 class MOSIClass {
     public:
         MOSIClass(int out_pin, int in_pin, int clk_pin, int ss_pin);
         ~MOSIClass();
-        void writeData(const char* msg, size_t size);
-        char* receiveData();
+        char* writeData(const char* msg, size_t size);
 
     private:
         GPIO in, out, clk, ss;

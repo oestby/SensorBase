@@ -16,10 +16,8 @@ MOSIClass::~MOSIClass() {
     ss.deexportPin();
 }
 
-void writeData(const char* msg, size_t size) {
+char* writeData(const char* msg, size_t size) {
+
 
 }
 
-char* recieveData() {
-
-}
