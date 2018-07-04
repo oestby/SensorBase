@@ -1,0 +1,24 @@
+[34m[1m[INFO] [2018-06-30 01:03:56]:[0m Logger created.
+[34m[1m[INFO] [2018-06-30 01:03:56]:[0m Unit test starting
+[33m[1m[WARNING] [2018-06-30 01:03:56]:[0m WARNING TEST
+[31m[1m[ERROR] [2018-06-30 01:03:56]:[0m ERROR TEST
+[32m[1m[DEBUG] [2018-06-30 01:03:56]:[0m DEBUG MSG TEST
+[34m[1m[INFO] [2018-06-30 01:03:56]:[0m Unit test ending
+[34m[1m[INFO] [2018-06-30 01:04:13]:[0m Logger created.
+[34m[1m[INFO] [2018-06-30 01:04:13]:[0m Unit test starting
+[33m[1m[WARNING] [2018-06-30 01:04:13]:[0m WARNING TEST
+[31m[1m[ERROR] [2018-06-30 01:04:13]:[0m ERROR TEST
+[32m[1m[DEBUG] [2018-06-30 01:04:13]:[0m DEBUG MSG TEST
+[34m[1m[INFO] [2018-06-30 01:04:13]:[0m Unit test ending
+[34m[1m[INFO] [2018-06-30 01:05:16]:[0m Logger created.
+[34m[1m[INFO] [2018-06-30 01:05:16]:[0m Unit test starting
+[33m[1m[WARNING] [2018-06-30 01:05:16]:[0m WARNING TEST
+[31m[1m[ERROR] [2018-06-30 01:05:16]:[0m ERROR TEST
+[32m[1m[DEBUG] [2018-06-30 01:05:16]:[0m DEBUG MSG TEST
+[34m[1m[INFO] [2018-06-30 01:05:16]:[0m Unit test ending
+[34m[1m[INFO] [2018-06-30 01:05:18]:[0m Logger created.
+[34m[1m[INFO] [2018-06-30 01:05:18]:[0m Unit test starting
+[33m[1m[WARNING] [2018-06-30 01:05:18]:[0m WARNING TEST
+[31m[1m[ERROR] [2018-06-30 01:05:18]:[0m ERROR TEST
+[32m[1m[DEBUG] [2018-06-30 01:05:18]:[0m DEBUG MSG TEST
+[34m[1m[INFO] [2018-06-30 01:05:18]:[0m Unit test ending

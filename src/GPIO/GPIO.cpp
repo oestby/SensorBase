@@ -10,7 +10,7 @@ GPIO::GPIO(int gpio_pin, iof direction):
 }
 
 GPIO::~GPIO() {
-    this->deexportPin();
+    this->unExportPin();
 }
 
 void GPIO::setDirection(iof new_direction) {
@@ -63,9 +63,9 @@ void GPIO::exportPin(void) {
     exported = true;
 }
 
-void GPIO::deexportPin(void) {
+void GPIO::unExportPin(void) {
     std::ofstream file;
-    file.open("/system/class/gpio/deexport");
+    file.open("/system/class/gpio/unExport");
     file << std::to_string(gpio_pin);
     exported = false;
 }

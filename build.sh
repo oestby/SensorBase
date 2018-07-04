@@ -7,4 +7,4 @@ fi
 
 cd build
 cmake ..
-make
+cmake --build . && ctest -VV

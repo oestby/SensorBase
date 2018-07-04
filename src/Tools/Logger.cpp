@@ -3,29 +3,26 @@ using namespace tools;
 Logger::Logger(std::string log_file):
     logfile_name(log_file), timer() 
 {
+    stream.open(logfile_name, std::ofstream::ate | std::ofstream::app);
     info("Logger created.");
 }
 
-void Logger::debug(std::string msg) {
-    stream.open(logfile_name, std::ofstream::ate | std::ofstream::app);
-    stream << "\e[32m\e[1m[DEBUG] [" << timer.getCurrentTimeString() << "]:\e[0m "<< msg << std::endl;
-    stream.close();
-}
-void Logger::info(std::string msg) {
-    stream.open(logfile_name, std::ofstream::ate | std::ofstream::app);
-    stream << "\e[34m\e[1m[INFO] ["<< timer.getCurrentTimeString() << "]:\e[0m "  << msg << std::endl;
-    stream.close();
-}
-void Logger::warn(std::string msg) {
-    stream.open(logfile_name, std::ofstream::ate | std::ofstream::app);
-    stream << "\e[33m\e[1m[WARNING] [" << timer.getCurrentTimeString() << "]:\e[0m " << msg << std::endl;
+Logger::~Logger() {
     stream.close();
 }
 
+void Logger::debug(std::string msg) {
+    stream << "\e[32m\e[1m[DEBUG] [" << timer.getCurrentTimeString() << "]:\e[0m "<< msg << std::endl;
+}
+void Logger::info(std::string msg) {
+    stream << "\e[34m\e[1m[INFO] ["<< timer.getCurrentTimeString() << "]:\e[0m "  << msg << std::endl;
+}
+void Logger::warn(std::string msg) {
+    stream << "\e[33m\e[1m[WARNING] [" << timer.getCurrentTimeString() << "]:\e[0m " << msg << std::endl;
+}
+
 void Logger::error(std::string msg) {
-    stream.open(logfile_name, std::ofstream::ate | std::ofstream::app);
     stream << "\e[31m\e[1m[ERROR] [" << timer.getCurrentTimeString() << "]:\e[0m " << msg << std::endl;
-    stream.close();
 }
         
 std::string Logger::getLogFileName(void) {

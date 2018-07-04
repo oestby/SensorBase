@@ -10,6 +10,7 @@ namespace tools {
 class Logger {
     public:
         Logger(std::string log_file = "log.log");
+        ~Logger();
 
         // I want this to be a singleton
         Logger(const Logger&) = delete;

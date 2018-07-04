@@ -28,7 +28,7 @@ class GPIO {
         void setValue(bool bitValue);
 
         void exportPin(void);
-        void deexportPin(void);
+        void unExportPin(void);
         bool isExported(void) const;
     private:
         bool exported;
