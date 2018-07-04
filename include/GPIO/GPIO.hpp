@@ -6,7 +6,7 @@
 
 namespace gpio {
 
-//Input or output flags.
+///Input or output flags for usage in the GPIO class.
 enum class iof { 
     IN, 
     OUT 
@@ -15,6 +15,11 @@ enum class iof {
 constexpr int LOW   = 0;
 constexpr int HIGH  = 1;
 
+/*!
+This is a class for controlling the Raspberry Pi's GPIO pins.
+
+Important notes on the usage is that an input pin can not change the value of its associated pin. That will throw and exception.
+*/
 class GPIO {
     public:
         /// Exports the chosen GPIO pin and sets the direction

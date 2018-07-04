@@ -1,12 +1,17 @@
 #include <GPIO/GPIO.hpp>
+#include <Tools/tools.hpp>
+#include <exceptions/io_direction_error.hpp>
 
 using namespace gpio;
 
+/*!
+Standard constructor
+
+*/
 GPIO::GPIO(int gpio_pin, iof direction):
     gpio_pin(gpio_pin), direction(direction)
 {
     this->exportPin();
-    this->setValue(false);
 }
 
 GPIO::~GPIO() {
@@ -36,12 +41,16 @@ int GPIO::readValue(void) const {
 }
 
 void GPIO::setValue(bool bitValue) {
+    if(direction != iof::OUT) {
+        throw tools::IoDirectionError();
+    }
+
     if(bitValue) {
         value = 1;
     } else {
         value = 0;
     }
-    
+
     std::string filename, writing;
 
     filename = "/system/class/gpio/gpio" 

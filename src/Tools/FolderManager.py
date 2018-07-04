@@ -1,9 +1,18 @@
+"""@package docstring
+This package is for moving files into the correct folders.
+
+Specify target directory with:
+[-d], [--directory] [ARG]
+
+Specify target file with:
+[-t], [--target] [ARG]
+
+"""
 import os
 import sys
 import shutil
 import glob
 import time as t
-
 DATA_PATH = ""
 FILE_NAME = "current"
 FILE_EXTENSION = "csv"

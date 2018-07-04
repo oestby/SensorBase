@@ -3,6 +3,7 @@ project(SENSOR_BASE)
 
 add_compile_options(-g -Wall -std=c++17)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 include_directories(include)
 
@@ -43,8 +44,7 @@ add_executable(main src/main.cpp)
 #   Linking            #
 ########################
 
-target_link_libraries(main 
-                           tools_lib
+target_link_libraries(main tools_lib
 )
 
 ########################
@@ -63,20 +63,4 @@ foreach(_test_file ${TEST_SRC_FILES})
     add_test(${_test_name} ${_test_name} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/build)
     set_tests_properties(${_test_name} PROPERTIES TIMEOUT 5)
 endforeach()
-#add_executable(log_test utests/test_Logger.cpp)
-#add_executable(time_test utests/test_Time.cpp)
-#add_executable(GPIO_test utests/test_GPIO.cpp)
 
-#target_link_libraries(log_test tools_lib
-#                               gtest_main
-#)
-
-#target_link_libraries(time_test tools_lib
-#                            gtest_main
-#)
-
-#target_link_libraries(GPIO_test GPIO_lib
-#                            gtest_main
-#)
-
-#add_test(GPIO_test GPIO_test)

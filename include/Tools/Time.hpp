@@ -4,6 +4,13 @@
 #include <ctime>
 #include <string>
 namespace tools {
+/*! A class for keeping time and printing time to strings.
+ *
+ *  To keep time nice and simple this class is used.
+ *  Use it's functions to print time in ISO format and to create timestamps
+ *  and other time related things.
+ *  It keeps track of it's time of creation internally.
+ */
 class Time {
 public:
     Time();
