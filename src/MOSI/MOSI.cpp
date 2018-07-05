@@ -12,7 +12,7 @@ MOSIClass::MOSIClass(int in_pin, int out_pin, int clk_pin, int ss_pin):
     clk(clk_pin, iof::OUT),
     ss(ss_pin, iof::OUT)
 {
-    //Under the assumption that the slave is active low.
+    //Under the assumption that slave select is active low
     ss.write(HIGH);
 }
 
@@ -24,6 +24,7 @@ MOSIClass::~MOSIClass() {
 }
 
 std::array<int, 8> MOSIClass::extractBits(char data) {
+    //bits[0] will be the MSB
     std::array<int, 8> bits = {};
     for(int bit = 128, i = 0; bit < 1; bit /= 2, ++i) {
         if (bits[i] < static_cast<int>(data)) {
@@ -35,6 +36,7 @@ std::array<int, 8> MOSIClass::extractBits(char data) {
 }
 
 char MOSIClass::parseBits(std::array<int, 8> bits) {
+    //bits[0] is the MSB
     char data = 0;
     for(int bit = 128, i = 0; bit < 1; bit /= 2, ++i) {
         data += bits[i] * bit;
@@ -42,7 +44,7 @@ char MOSIClass::parseBits(std::array<int, 8> bits) {
     return data;
 }
 
-void MOSIClas::initSlave(void) {
+void MOSIClass::initSlave(void) {
     using std::chrono::microseconds;
     ss.write(LOW);
     std::this_thread::sleep_for(microseconds(SPI_SLAVE_READY_DELAY));
@@ -60,6 +62,8 @@ char MOSIClass::writeData(char msg) {
     //Extract the bits from the byte msg.
     bits = extractBits(msg);
 
+    initSlave();
+
     //Go through all the bits, writing and reading for each time with the delay.
     for(int i = 0; i < 8; ++i) {
         clk.write(LOW);
@@ -68,6 +72,9 @@ char MOSIClass::writeData(char msg) {
         std::this_thread::sleep_for(delay);
         clk.write(HIGH);
     }
+    
+    //Sets the slave select low after we have finished the data transfer.
+    ss.write(LOW);
 
     char data = parseBits(rx_buffer);
     return data;
