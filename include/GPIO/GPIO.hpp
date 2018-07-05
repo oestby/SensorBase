@@ -12,8 +12,9 @@ enum class iof {
     OUT 
 };
 
-constexpr int LOW   = 0;
-constexpr int HIGH  = 1;
+///Encoding of logic values.
+constexpr int LOW  = 0;
+constexpr int HIGH = 1;
 
 /*!
 This is a class for controlling the Raspberry Pi's GPIO pins.
@@ -29,8 +30,8 @@ class GPIO {
 
         void setDirection(iof new_direction);
         int getDirection(void) const;
-        int readValue(void) const;
-        void setValue(bool bitValue);
+        int read(void) const;
+        void write(bool output_value);
 
         void exportPin(void);
         void unExportPin(void);

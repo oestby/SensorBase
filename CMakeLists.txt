@@ -17,6 +17,9 @@ file(GLOB tools_SRC "src/Tools/*.cpp")
 #GPIO library sources
 file(GLOB GPIO_SRC "src/GPIO/*.cpp")
 
+#MOSI library sources
+file(GLOB MOSI_SRC "src/MOSI/*.cpp")
+
 ########################
 #   Libraries          #
 ########################
@@ -27,6 +30,10 @@ add_library(tools_lib
 
 add_library(GPIO_lib
         ${GPIO_SRC}
+)
+
+add_library(MOSI_lib
+        ${MOSI_SRC}
 )
 
 #add_subdirectory(lib/serial)

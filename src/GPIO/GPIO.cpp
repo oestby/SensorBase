@@ -26,7 +26,7 @@ int GPIO::getDirection(void) const {
     return static_cast<int>(direction);
 }
 
-int GPIO::readValue(void) const {
+int GPIO::read(void) const {
     std::ifstream file;
     std::string filename, reading;
     
@@ -37,15 +37,16 @@ int GPIO::readValue(void) const {
     file.open(filename);
     file >> reading;
     file.close();
+    
     return std::stoi(reading);
 }
 
-void GPIO::setValue(bool bitValue) {
+void GPIO::write(bool output_value) {
     if(direction != iof::OUT) {
         throw tools::IoDirectionError();
     }
 
-    if(bitValue) {
+    if(output_value) {
         value = 1;
     } else {
         value = 0;
