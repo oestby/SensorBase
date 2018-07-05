@@ -11,8 +11,13 @@
  * This class is created to handle serial communication using MOSI.
  *
  */
+///The time the MCU takes between bits.
+constexpr int SPI_DELAY_TIME        = 10000; 
+///The delay needed for the slave to be ready to send.
+constexpr int SPI_SLAVE_READY_DELAY = 10000;
+///There should be a way to change the word size of the AVR with one variable
+constexpr int AVR_WORD_SIZE         = 8;
 
-constexpr int SPI_DELAY_TIME = 10000; ///The time the MCU takes between bits.
 
 using namespace gpio;
 
@@ -25,6 +30,7 @@ class MOSIClass {
         char writeData(char msg);
 
     private:
+        void initSlave(void);
         std::array<int, 8> extractBits(char data);
         char parseBits(std::array<int, 8> bits);
         GPIO in, out, clk, ss;
