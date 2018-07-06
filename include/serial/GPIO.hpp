@@ -4,7 +4,9 @@
 #include <string>
 #include <fstream>
 
+/// Namespace containing all serial communication tools.
 namespace serial {
+/// Contains all the GPIO related stuff.
 namespace gpio {
 
 ///Input or output flags for usage in the GPIO class.
@@ -29,12 +31,20 @@ class GPIO {
         /// Deexports the GPIO pin.
         ~GPIO();
 
+        ///Sets the direction of the pin
         void setDirection(iof new_direction);
+        ///Gets the direction of the pin
         int getDirection(void) const;
+        ///Returns the logic value read from the pin.
         int read(void) const;
+        ///Writes a logic value to the pin
         void write(bool output_value);
 
+
+        ///Exports the pin so that it is active
         void exportPin(void);
+
+        ///Un-exports the pin to deactivate it.
         void unExportPin(void);
         bool isExported(void) const;
     private:
