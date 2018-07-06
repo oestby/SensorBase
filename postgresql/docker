@@ -1,0 +1,5 @@
+docker-compose up -d //Starts the docker container as daemon
+docker-compose stop // duhh
+docker-compose down //Cleans up the interface excluding volumes.
+docker volume ps    //list docker volumes
+docker volume rm     //removes volume
