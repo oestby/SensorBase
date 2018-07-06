@@ -1,4 +1,4 @@
-#include <Tools/Logger.hpp>
+#include <tools/logger.hpp>
 #include <gtest/gtest.h>
 
 using namespace tools;

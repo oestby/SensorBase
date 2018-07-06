@@ -1,4 +1,4 @@
-#include <Serial/MOSI.hpp>
+#include <serial/MOSI.hpp>
 
 using namespace gpio;
 

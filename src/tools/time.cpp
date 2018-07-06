@@ -1,4 +1,4 @@
-#include <Tools/Time.hpp>
+#include <tools/time.hpp>
 using namespace tools;
 Time::Time():
     start_time(time(nullptr))

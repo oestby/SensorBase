@@ -5,7 +5,7 @@
 #include <fstream>
 #include <iostream>
 
-#include <Tools/Time.hpp>
+#include <tools/time.hpp>
 namespace tools {
 class Logger {
     public:

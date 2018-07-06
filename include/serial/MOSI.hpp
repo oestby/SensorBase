@@ -1,7 +1,7 @@
 #ifndef MOSI_HPP
 #define MOSI_HPP
 
-#include <GPIO/GPIO.hpp>
+#include <serial/GPIO.hpp>
 #include <array>
 #include <thread>
 #include <chrono>

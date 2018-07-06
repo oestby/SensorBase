@@ -1,4 +1,4 @@
-#include <Tools/tools.hpp>
+#include <tools/tools.hpp>
 #include <gtest/gtest.h>
 
 TEST(ToolTest, testPadding) {

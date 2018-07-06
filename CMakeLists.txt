@@ -12,31 +12,22 @@ include_directories(include)
 ########################
 
 #Tools library sources
-file(GLOB tools_SRC "src/Tools/*.cpp")
+file(GLOB TOOLS_SRC "src/tools/*.cpp")
 
-#GPIO library sources
-file(GLOB GPIO_SRC "src/GPIO/*.cpp")
-
-#MOSI library sources
-file(GLOB MOSI_SRC "src/MOSI/*.cpp")
+#serial library sources
+file(GLOB SERIAL_SRC "src/serial/*.cpp")
 
 ########################
 #   Libraries          #
 ########################
 
 add_library(tools_lib
-        ${tools_SRC}
+    ${TOOLS_SRC}
 )
 
-add_library(GPIO_lib
-        ${GPIO_SRC}
+add_library(serial_lib
+    ${SERIAL_SRC}
 )
-
-add_library(MOSI_lib
-        ${MOSI_SRC}
-)
-
-#add_subdirectory(lib/serial)
 
 add_subdirectory(lib/googletest)
 
@@ -66,7 +57,7 @@ enable_testing()
 foreach(_test_file ${TEST_SRC_FILES})
     get_filename_component(_test_name ${_test_file} NAME_WE)
     add_executable(${_test_name} ${_test_file})
-    target_link_libraries(${_test_name} gtest gtest_main GPIO_lib tools_lib${CMAKE_THREAD_LIB_INIT})
+    target_link_libraries(${_test_name} gtest gtest_main serial_lib tools_lib ${CMAKE_THREAD_LIB_INIT})
     add_test(${_test_name} ${_test_name} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/build)
     set_tests_properties(${_test_name} PROPERTIES TIMEOUT 5)
 endforeach()

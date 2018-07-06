@@ -1,8 +1,8 @@
 #include <string>
 #include <iostream>
-#include "Tools/Logger.hpp"
-#include "Tools/Time.hpp"
-#include <Tools/tools.hpp>
+#include <tools/logger.hpp>
+#include <tools/time.hpp>
+#include <tools/tools.hpp>
 
 constexpr char TEMP_PORT[] = "/dev/USB0";
 

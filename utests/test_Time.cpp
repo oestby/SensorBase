@@ -1,4 +1,4 @@
-#include <Tools/Time.hpp>
+#include <tools/time.hpp>
 #include <gtest/gtest.h>
 #include <iostream>
 #include <thread>
