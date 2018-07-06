@@ -2,7 +2,7 @@
 #include <tools/tools.hpp>
 #include <exceptions/io_direction_error.hpp>
 
-using namespace gpio;
+using namespace serial::gpio;
 
 /*!
 Standard constructor

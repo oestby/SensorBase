@@ -1,6 +1,7 @@
 #include <serial/MOSI.hpp>
 
-using namespace gpio;
+using namespace serial;
+using namespace serial::gpio;
 
 MOSIClass::MOSIClass(int in_pin, int out_pin, int clk_pin, int ss_pin):
     in_pin(in_pin),

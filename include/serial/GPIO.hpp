@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 
+namespace serial {
 namespace gpio {
 
 ///Input or output flags for usage in the GPIO class.
@@ -44,5 +45,6 @@ class GPIO {
 
 };
 } //namespace gpio
+} //namespace serial
 
 #endif //GPIO_HPP

@@ -6,11 +6,7 @@
 #include <thread>
 #include <chrono>
 
-/*! MOSI Class for serial communication
- * 
- * This class is created to handle serial communication using MOSI.
- *
- */
+namespace serial {
 ///The time the MCU takes between bits.
 constexpr int SPI_DELAY_TIME        = 10000; 
 ///The delay needed for the slave to be ready to send.
@@ -19,10 +15,15 @@ constexpr int SPI_SLAVE_READY_DELAY = 10000;
 constexpr int AVR_WORD_SIZE         = 8;
 
 
-using namespace gpio;
+using namespace serial::gpio;
 
 class MOSITest;
 
+/*! MOSI Class for serial communication
+ * 
+ * This class is created to handle serial communication using MOSI.
+ *
+ */
 class MOSIClass {
     public:
         MOSIClass(int in_pin, int out_pin, int clk_pin, int ss_pin);
@@ -33,12 +34,13 @@ class MOSIClass {
         void initSlave(void);
         std::array<int, 8> extractBits(char data);
         char parseBits(std::array<int, 8> bits);
-        GPIO in, out, clk, ss;
         int in_pin, out_pin, clk_pin, ss_pin;
-
+        GPIO in, out, clk, ss;
+        
     friend MOSITest;
 
 };
+} //namespace serial
 
 #endif //MOSI_HPP
 

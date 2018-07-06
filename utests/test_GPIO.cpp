@@ -1,7 +1,7 @@
 #include <serial/GPIO.hpp>
 #include <gtest/gtest.h>
 
-using namespace gpio;
+using namespace serial::gpio;
 
 class GPIOTest: public ::testing::Test {
     public:
