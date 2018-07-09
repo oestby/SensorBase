@@ -29,10 +29,10 @@ TEST_F(TimerTest, currentTimeTest) {
 }
 
 TEST_F(TimerTest, stringTime) {
-    EXPECT_EQ(timer.getCurrentTimeString(),
-              timer_second.getCurrentTimeString());
-    EXPECT_EQ(timer.getStartTimeString(),
-              timer_second.getStartTimeString());
+    EXPECT_EQ(timer.getCurrentTimestamp(),
+              timer_second.getCurrentTimestamp());
+    EXPECT_EQ(timer.getStartTimestamp(),
+              timer_second.getStartTimestamp());
 }
 
 

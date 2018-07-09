@@ -12,16 +12,16 @@ services:
 #            - postgres:/var/lib/postgresql/data
 #Remove these for persistent data storage.
 
-    pgadmin:
-        image: dpage/pgadmin4
-        restart: always
-        ports:
-            - "5431:80"
-        depends_on: 
-            - postgres
-        environment:
-            PGADMIN_DEFAULT_EMAIL: "oskar.oestby@gmail.com"
-            PGADMIN_DEFAULT_PASSWORD: "test"
-
+#    pgadmin:
+#        image: dpage/pgadmin4
+#        restart: always
+#        ports:
+#            - "5431:80"
+#        depends_on: 
+#            - postgres
+#        environment:
+#            PGADMIN_DEFAULT_EMAIL: "oskar.oestby@gmail.com"
+#            PGADMIN_DEFAULT_PASSWORD: "test"
+#
 #volumes:
 #    postgres:

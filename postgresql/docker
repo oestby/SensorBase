@@ -3,3 +3,4 @@ docker-compose stop // duhh
 docker-compose down //Cleans up the interface excluding volumes.
 docker volume ps    //list docker volumes
 docker volume rm     //removes volume
+psql -h hostname -p port -U usrname -W password

@@ -21,11 +21,12 @@ public:
     double getRunTime(void) const;
     double getStartTime(void) const; 
     double getCurrentTime(void) const; 
-    std::string getCurrentTimeString(void) const;
-    std::string getStartTimeString(void) const; 
+    std::string getCurrentTimestamp(void) const;
+    std::string getStartTimestamp(void) const; 
 private:
     time_t start_time;
     //Formats and returns a time to a ISO standard string
+    //YYYY-MM-DD HH:MM:SS
     std::string formatTimeISO(time_t current_time) const; 
 };
 } //namespace tools
