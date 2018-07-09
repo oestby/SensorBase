@@ -4,7 +4,7 @@
 #include <Sensor/SensorBase>
 #include <string>
 
-class TempData: public SensorBase {
+class TempData: public SensorBase{
     private:
         double reading;
 
