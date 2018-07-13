@@ -17,6 +17,8 @@ file(GLOB TOOLS_SRC "src/tools/*.cpp")
 #serial library sources
 file(GLOB SERIAL_SRC "src/serial/*.cpp")
 
+file(GLOB SENSOR_SRV "src/sensor/*.cpp")
+
 ########################
 #   Libraries          #
 ########################
@@ -27,6 +29,10 @@ add_library(tools_lib
 
 add_library(serial_lib
     ${SERIAL_SRC}
+)
+
+add_library(sensor_lib
+    ${SENSOR_SRC}
 )
 
 add_subdirectory(lib/googletest)

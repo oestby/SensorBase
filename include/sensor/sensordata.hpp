@@ -6,10 +6,10 @@
 
 class SensorData {
     public:
-        DataBase(std::string sensor_name, unsigned int sensor_id):
-            sensor_name(sensor_name), sensor_id(sensor_id) {
+        SensorData(unsigned int sensor_id):
+            sensor_id(sensor_id) {
                 //Empty
-            }
+       }
 
         unsigned int getSensorId(void) const {
             return sensor_id;
