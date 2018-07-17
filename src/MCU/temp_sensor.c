@@ -52,19 +52,19 @@ uint16_t sendMOSI(uint16_t value) {
 void adcInit(void) {
     //Should set the ADC frequency divisor and
     //reference voltage as well.
-    PRR &= !PRADC;
-    _delay_ms(5);
+    ADCSRA &= _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);
+
 }
 
 uint16_t readADC(char adc_pin) {
-    //Chose the correct ADC
+    //Choose the correct ADC
     ADMUX &= (0xF & adc_pin);
     //Enable the ADC conversion
     ADCSRA |= _BV(ADEN);
+    ADCSRA &= _BV(ADSC);
     //Wait for the conversion to finish
-    //There is a register to tell when the conversion is done.
-    //By using that you won't have to guess.
-    _delay_ms(5);
+    while(ADCSRA & _BV(ADIF))
+        ;
 
     //We have to read the low register first to still have access to the high reg.
     uint16_t value = ADCL;
