@@ -16,7 +16,8 @@
 //Temperature sensor pin
 #define TSP             0
 
-char flags = 0x0;
+volatile char flags = 0x0;
+
 struct sensors {
     uint16_t temperature;
 } sensor_data;

@@ -1,4 +1,4 @@
-#include <serial/GPIO.hpp>
+#include <serial/gpio.hpp>
 #include <gtest/gtest.h>
 
 using namespace serial::gpio;

@@ -1,7 +1,7 @@
 #ifndef TEMPERATURE_SENSOR
 #define TEMPERATURE_SENSOR
 
-#include <sensor/sensorbase.hpp>
+#include <sensor/sensordata.hpp>
 #include <string>
 
 class TempData: public SensorData {
@@ -9,8 +9,7 @@ class TempData: public SensorData {
         double reading;
 
     public:
-        TempData(unsigned int sensor_id, 
-                   double data);
+        TempData(unsigned int sensor_id, double data);
 
         double getReading(void) const;
         

@@ -14,10 +14,7 @@ include_directories(include)
 #Tools library sources
 file(GLOB TOOLS_SRC "src/tools/*.cpp")
 
-#serial library sources
-file(GLOB SERIAL_SRC "src/serial/*.cpp")
-
-file(GLOB SENSOR_SRV "src/sensor/*.cpp")
+file(GLOB SENSOR_SRC "src/sensor/*.cpp")
 
 ########################
 #   Libraries          #
@@ -27,15 +24,12 @@ add_library(tools_lib
     ${TOOLS_SRC}
 )
 
-add_library(serial_lib
-    ${SERIAL_SRC}
-)
-
 add_library(sensor_lib
     ${SENSOR_SRC}
 )
 
 add_subdirectory(lib/googletest)
+add_subdirectory(lib/serial)
 
 ########################
 #   Executables        #

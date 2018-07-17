@@ -16,7 +16,7 @@ class SensorData {
         }
 
         std::string getTimeStamp(void) const {
-            return time_stamp.getStartTimestring();
+            return time_stamp.getStartTimestamp();
         }
 
         virtual std::string getData(void) const;

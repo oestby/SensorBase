@@ -1,4 +1,4 @@
-src=project
+src=temp_sensor
 baud=19200
 programmerDev=/dev/ttyUSB3
 programmerType=dragon_isp
