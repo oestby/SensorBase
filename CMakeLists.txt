@@ -29,7 +29,8 @@ add_library(sensor_lib
 )
 
 add_subdirectory(lib/googletest)
-add_subdirectory(lib/serial)
+add_subdirectory(lib/rpi_serial_lib)
+
 
 ########################
 #   Executables        #
